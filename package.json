@@ -10,6 +10,7 @@
     "@types/node": "^12.7.2",
     "electron": "^6.0.2",
     "electron-mocha": "^8.1.1",
+    "path-exists": "^4.0.0",
     "should": "^13.2.3",
     "typescript": "^3.5.3"
   },
