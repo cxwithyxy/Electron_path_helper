@@ -21,7 +21,7 @@ export class Path_helper
             }
             return process.env.PORTABLE_EXECUTABLE_DIR
         }
-        return app.getAppPath()
+        return process.cwd()
     }
 
     

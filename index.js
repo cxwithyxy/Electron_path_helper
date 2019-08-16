@@ -18,7 +18,7 @@ class Path_helper {
             }
             return process.env.PORTABLE_EXECUTABLE_DIR;
         }
-        return electron_1.app.getAppPath();
+        return process.cwd();
     }
     /**
      * 是否在打包环境下运行
