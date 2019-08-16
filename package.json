@@ -6,9 +6,14 @@
   "author": "chenxuan <523764720@qq.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
     "electron": "^6.0.2",
+    "electron-mocha": "^8.1.1",
+    "should": "^13.2.3",
     "typescript": "^3.5.3"
   },
-  "scripts": {}
+  "scripts": {
+    "test": "tsc && electron-mocha test/*.js"
+  }
 }
