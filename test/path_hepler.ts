@@ -1,4 +1,4 @@
-import { Path_helper } from "../index";
+import { Path_helper } from "../src/index";
 import should from "should";
 import path_exists from "path-exists";
 import path from "path";
@@ -23,15 +23,15 @@ describe("Path_helper", () =>
             should(app_path).be.String()
         })
 
-        it("must exists index.js", async () =>
+        it("must exists index.ts", async () =>
         {
-            let is_exists = await path_exists(path.join(app_path, "index.js"))
+            let is_exists = await path_exists(path.join(app_path, "src/index.ts"))
             should(is_exists).equal(true)
         })
 
-        it("must NOT exists index2.js", async () =>
+        it("must NOT exists index2.ts", async () =>
         {
-            let is_exists = await path_exists(path.join(app_path, "index2.js"))
+            let is_exists = await path_exists(path.join(app_path, "src/index2.ts"))
             should(is_exists).equal(false)
         })
     })
