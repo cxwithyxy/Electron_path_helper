@@ -1,20 +1,25 @@
 {
-  "name": "Electron_path_helper",
-  "version": "1.201908161526.0",
-  "main": "index.js",
+  "name": "electron-path-helper",
+  "version": "1.20200410164539.0",
+  "main": "build/src/index.js",
   "repository": "https://github.com/cxwithyxy/Electron_path_helper.git",
   "author": "chenxuan <523764720@qq.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
+    "del-cli": "^3.0.0",
     "electron": "^6.0.2",
     "electron-mocha": "^8.1.1",
+    "make-dir-cli": "^2.0.0",
     "path-exists": "^4.0.0",
     "should": "^13.2.3",
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "test": "tsc && electron-mocha test/*.js"
+    "ts_build": "yarn del-cli ./build && yarn tsc",
+    "test": "yarn ts_build && electron-mocha",
+    "test_all": "yarn ts_build && electron-mocha ./build/test/*.js",
+    "npm_pack": "yarn ts_build -d && for /F %i in ('npm pack') do ( yarn make-dir ./dist && move %i ./dist/electron-path-helper.tgz)"
   }
 }
