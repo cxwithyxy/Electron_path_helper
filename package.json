@@ -9,7 +9,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
     "del-cli": "^3.0.0",
-    "electron": "^6.0.2",
+    "electron": "^7.2.4",
     "electron-mocha": "^8.1.1",
     "make-dir-cli": "^2.0.0",
     "path-exists": "^4.0.0",
